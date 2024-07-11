@@ -18,3 +18,4 @@ def linear(arr,target):
           if arr[i]==target:
                 print(f'{(arr[i])}')
 linear([23,4,9,6,5,34,3],6)
+

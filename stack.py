@@ -40,7 +40,6 @@ simple_stack.stack_empty()
 
 
 print("USING VARIABLE TOP STACK")
-print('lol')
 #Stack with the help of of top
 
 class Stack_top:

@@ -13,6 +13,12 @@ def insert(root,data):
         else:
             root.right = insert(root.right,data)
         return root 
+    
+def min_val(root):
+    if root.left is None:
+        return root.data
+    else:
+        min_val(root.left)
 
 def inorder(root):
     if root:

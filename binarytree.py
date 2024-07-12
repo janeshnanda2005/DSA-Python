@@ -20,6 +20,19 @@ def inorder(root):
         print(root.data,end= " ")
         inorder(root.right)
 
+def preorder(root):
+    if root:
+        print(root.data,end=" ")
+        preorder(root.left)
+        preorder(root.right)
+
+def postorder(root):
+    if root:
+        postorder(root.left)
+        postorder(root.right)
+        print(root.data,end=" ")
+
+
 root = None
 root = insert(root, 10)
 insert(root, 5)
@@ -29,5 +42,11 @@ insert(root, 7)
 insert(root, 12)
 insert(root, 20)
 
-print("Inorder traversal")
+print("\nInorder traversal")
 inorder(root) 
+
+print("\nPostorder traversal")
+postorder(root)
+
+print("\nPreorder traversal")
+preorder(root)

@@ -64,68 +64,14 @@ class Stack_top:
      def peek(self):
           print(self.s[self.top])
 
-     def diaplay(self):
+     def display(self):
           print(self.s)
 
 top = Stack_top()
 top.push(34)
 top.push(90)
+top.push(911)
 top.pop(34)
 top.peek()
-top.diaplay()
+top.display()
 
-#Stack in linked lists
-
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-class Stack:
-    def __init__(self):
-        self.head = None
-
-
-    def push(self, element):
-        new_node = Node(element)
-        new_node.next = self.head
-        self.head = new_node
-
-    def pop(self):
-        if self.is_empty():
-            print("Error: Stack Underflow")
-            return None
-        popped_element = self.head.data
-        self.head = self.head.next
-        return popped_element
-
-    def peek(self):
-        if self.is_empty():
-            print("Error: Stack Underflow")
-            return None
-        return self.head.data
-
-    def size(self):
-        size = 0
-        current = self.head
-        while current:
-            size += 1
-            current = current.next
-        return size
-
-
-    def is_empty(self):
-        return self.head is None
-
-def main():
-    stack = Stack()
-    stack.push(10)
-    stack.push(20)
-    stack.push(30)
-    print("Top element:", stack.peek())
-    print("Popped element:", stack.pop())
-    print("Stack size:", stack.size())
-    print("Stack empty?", stack.is_empty())
-
-if __name__ == "__main__":
-    main()

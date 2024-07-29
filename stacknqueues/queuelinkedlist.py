@@ -38,7 +38,23 @@ class Queue:
 
     def peek(self):
         print(self.head.data)
+
+    def max(self):
+        c = self.head.data
+        while self.head:
+            if self.head.data > c:
+                c = self.head.data
+            self.head = self.head.next
+        print(c)
         
+    def min(self):
+        c = self.head.data
+        while self.head:
+            if self.head.data < c:
+                c = self.head.data
+            self.head = self.head.next
+        print(c)
+
 my = Queue()
 my.enqueue(23)
 my.enqueue(3)
@@ -47,3 +63,5 @@ my.peek()
 my.display()
 my.length()
 my.is_empty()
+my.max()
+my.min()

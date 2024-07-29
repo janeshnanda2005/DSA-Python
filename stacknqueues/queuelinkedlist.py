@@ -21,7 +21,7 @@ class Queue:
     
     def dequeue(self,data):
         if self.is_empty() == True:
-            print("No items to delete")
+            return "No items to delete"
         
     
     def is_empty(self):
@@ -34,7 +34,7 @@ class Queue:
         while current:
             c+=1
             current = current.next
-        print(c)
+        return '\n',c
 
     def peek(self):
         print(self.head.data)
@@ -45,22 +45,25 @@ class Queue:
             if self.head.data > c:
                 c = self.head.data
             self.head = self.head.next
-        print(c)
-        
+        return c
+    
     def min(self):
-        c = self.head.data
-        while self.head:
-            if self.head.data < c:
-                c = self.head.data
-            self.head = self.head.next
-        print(c)
+        if self.head is None:
+            print('The queue is empty ')
+        current = self.head
+        min = current.data
+        while current:
+            if current.data < min:
+                min = current.data
+            current = current.next
+        return min
 
 my = Queue()
 my.enqueue(23)
 my.enqueue(3)
-my.enqueue(33)
+my.enqueue(100)
+my.enqueue(34)
 my.peek()
-my.display()
 my.length()
 my.is_empty()
 my.max()

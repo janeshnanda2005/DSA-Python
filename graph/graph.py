@@ -1,4 +1,4 @@
-def dfs_without_library(graph, start):
+def dfs(graph, start):
 
   visited = set()
   stack = [start]
@@ -23,4 +23,4 @@ graph = {
   'F': []
 }
 
-dfs_without_library(graph, 'A')
+dfs(graph, 'A')

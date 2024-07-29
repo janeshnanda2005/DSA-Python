@@ -20,7 +20,9 @@ class Queue:
             current = current.next
     
     def dequeue(self,data):
-        ...
+        if self.is_empty() == True:
+            print("No items to delete")
+        
     
     def is_empty(self):
         if self.data is None:
@@ -43,3 +45,5 @@ my.enqueue(3)
 my.enqueue(33)
 my.peek()
 my.display()
+my.length()
+my.is_empty()

@@ -23,3 +23,12 @@ graph = {
 start_node = 'A'
 shortest_distances = dijkstra(graph, start_node)
 print(shortest_distances)
+
+"""dynamic implementaion
+n=int(input("enter the number of times:"))
+for i in range(n):
+  key = eval(input("enter key"))
+  value = eval(input("enter value"))
+  d[key] = value
+  
+dfs(graph,'a')"""

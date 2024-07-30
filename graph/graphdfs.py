@@ -23,3 +23,14 @@ graph = {
 }
 
 dfs(graph, 'A')
+
+"""
+dynamic implementaion
+n=int(input("enter the number of times:"))
+for i in range(n):
+  key = eval(input("enter key"))
+  value = eval(input("enter value"))
+  d[key] = value
+  
+dfs(graph,'a')"""
+

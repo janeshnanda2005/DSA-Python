@@ -1,7 +1,6 @@
 def bfs(graph, start):
   visited = set()
   queue = [start] 
-  visited.add(start)
 
   while queue:
     vertex = queue.pop(0)   

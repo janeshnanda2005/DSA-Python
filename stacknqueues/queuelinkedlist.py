@@ -48,15 +48,14 @@ class Queue:
         return c
     
     def min(self):
+        c = self.head.data
         if self.head is None:
             print('The queue is empty ')
-        current = self.head
-        min = current.data
-        while current:
-            if current.data < min:
-                min = current.data
-            current = current.next
-        return min
+        while self.head:
+            if self.head.data < c:
+                c = self.head.data
+            self.head = self.head.next
+        return c
 
 my = Queue()
 my.enqueue(23)
@@ -66,5 +65,4 @@ my.enqueue(34)
 my.peek()
 my.length()
 my.is_empty()
-my.max()
-my.min()
+print(my.max())

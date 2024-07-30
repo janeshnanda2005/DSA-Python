@@ -6,7 +6,7 @@ class Queue:
         self.q.append(data)
 
     def dequeue(self,data):
-        self.q.pop(self.q.pop(data))
+        self.q.pop()
     
     def display(self):
         print(self.q)

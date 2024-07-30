@@ -13,7 +13,6 @@ def dfs(graph, start):
 
   return visited
 
-
 graph = {
   'A': ['B', 'C'],
   'B': ['D', 'E'],

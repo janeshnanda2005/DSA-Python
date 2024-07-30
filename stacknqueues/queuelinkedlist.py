@@ -5,6 +5,7 @@ class Node:
 class Queue:
     def __init__(self):
         self.head = None
+
     
     def enqueue(self,data):
         if self.head == None:
@@ -12,18 +13,22 @@ class Queue:
         node = Node(data)
         node.next = self.head
         self.head = node
+        
 
     def display(self):
         current = self.head
         while current:
             print(current.data,end = " ")
             current = current.next
-    
-    def dequeue(self,data):
-        if self.is_empty() == True:
-            return "No items to delete"
         
     
+    def dequeue(self):
+        current = self.head
+        if self.is_empty() == True:
+            return "No items to delete"
+        current.data = None
+        current = current.next
+
     def is_empty(self):
         if self.data is None:
             return True
@@ -65,4 +70,5 @@ my.enqueue(34)
 my.peek()
 my.length()
 my.is_empty()
-print(my.max())
+my.dequeue()
+my.display()

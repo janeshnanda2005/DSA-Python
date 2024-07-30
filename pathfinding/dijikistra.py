@@ -1,19 +1,19 @@
 import heapq
 def dijkstra(graph, start):
-    distances = {node: float('inf') for node in graph}
+    distances = {node:float('inf') for node in graph}
     distances[start] = 0
-    priority_queue = [(0, start)]
-    while priority_queue:
-        current_distance, current_node = heapq.heappop(priority_queue)
+    queue = [(0,start)]
+
+    while queue:
+        current_distance ,current_node = heapq.heappop(queue)
         if current_distance > distances[current_node]:
             continue
-        for neighbor, weight in graph[current_node].items():
-            distance = current_distance + weight
-            if distance < distances[neighbor]:
-                distances[neighbor] = distance
-                heapq.heappush(priority_queue, (distance, neighbor))
+        for n , w in graph[current_node].items():
+            current = current_distance+w
+            if current < distances[n]:
+                distances[n] = current
+                heapq.heappush(queue,(current,n))
     return distances
-
 graph = {
     'A': {'B': 5, 'C': 3},
     'B': {'D': 2},

@@ -14,6 +14,43 @@ def insert(root,data):
             root.right = insert(root.right,data)
         return root 
     
+def search(root,target):
+    if root is None:
+        return None
+    
+    if root.data == target:
+        return f'{root.data} is found'
+    
+    if target < root.data:
+        return search(root.left,target)
+    else:
+        return search(root.right,target)
+
+'''def delete(root,data):
+    if root is None:
+        return root.data = 
+    elif root.data < data:
+        root.left = delete(root.left,data)
+    elif root.data > data:
+        root.right = delete(root.right,data)
+    else:
+        if root.left is None:
+            return root.right
+        elif root.right is None:
+            return root.left
+        
+        temp = _min_value_node(root.right)
+        root.data = temp.data
+        root.right = delete(root.right, temp.data)
+    
+    return root'''
+
+def _min_value_node(node):
+    current = node
+    while current.left is not None:
+        current = current.left
+    return current
+
 
 def inorder(root):
     if root:
@@ -34,14 +71,17 @@ def postorder(root):
         print(root.data,end=" ")
 
 
-root = None
-root = insert(root, 10)
+
+root = insert(None, 10)
 insert(root, 5)
 insert(root, 15)
 insert(root, 3)
 insert(root, 7)
 insert(root, 12)
 insert(root, 20)
+
+print('Search technique')
+print(f'{search(root,7)}')
 
 print("\nInorder traversal")
 inorder(root) 
@@ -52,32 +92,6 @@ postorder(root)
 print("\nPreorder traversal")
 preorder(root)
 
-#2
 
-class Tree_nodes:
-    def __init__(self,data):
-        self.data = data
-        self.left = None
-        self.right = None
-
-def search(root,target):
-    if root is None:
-        return None
-    
-    if root.data == target:
-        return root.data
-    
-    if target < root.data:
-        return search(root.left,target)
-    else:
-        return search(root.right,target)
-
-
-root = Tree_nodes(23)
-root.left = Tree_nodes(17)
-root.right = Tree_nodes(56)
-root.left.left = Tree_nodes(8)
-root.left.right = Tree_nodes(89)
-
-print(f'\n{search(root,17)}')
-
+print("\nInorder traversal")
+inorder(root)

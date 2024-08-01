@@ -11,11 +11,11 @@ def binary(arr,target):
           else:
                right = mid+1
 
-binary([23,4,9,6,5,34,3],6)
+binary([10,20,30,40,50,60],60)
 
 def linear(arr,target):
      for i in range(len(arr)):
           if arr[i]==target:
-                print(f'{(arr[i])}')
+                print(f'{(arr[i])} found in {arr.index(arr[i])}')
 linear([23,4,9,6,5,34,3],6)
 

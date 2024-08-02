@@ -7,12 +7,12 @@ class BinaryTree:
 def insert(root,data):
     if root is None:
         return BinaryTree(data)
+
+    if data < root.data:
+        root.left = insert(root.left,data)
     else:
-        if data < root.data:
-            root.left = insert(root.left,data)
-        else:
-            root.right = insert(root.right,data)
-        return root 
+        root.right = insert(root.right,data)
+    return root 
     
 def search(root,target):
     if root is None:

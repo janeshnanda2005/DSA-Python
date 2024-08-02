@@ -10,11 +10,19 @@ class Stackll:
           self.head = None
           
      def push(self,data):
-          if self.head == None:
-               self.head = Node(data)
+          node = Node(data)
+          if self.head is None:
+               self.data = node
           new_node = Node(data)
           new_node.next = self.head
           self.head = new_node
+
+     def pop(self):
+          if self.is_empty():
+            return "Stack is empty, cannot pop."
+          removed_data = self.head.data  
+          self.head = self.head.next      
+          return removed_data
      
      def is_empty(self):
           if self.head is None:
@@ -29,7 +37,7 @@ class Stackll:
           return c
      
      def peek(self):
-          return self.head.data
+          return f'\n{self.head.data}'     
      
      def display(self):
           current = self.head
@@ -41,8 +49,7 @@ class Stackll:
                
 simple_stack1 = Stackll()
 simple_stack1.is_empty()
+simple_stack1.push(13)
 simple_stack1.push(23)
-simple_stack1.push(43)
-simple_stack1.push(44)
-simple_stack1.peek()
+simple_stack1.push(34)
 simple_stack1.display()

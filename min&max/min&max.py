@@ -18,12 +18,25 @@ class MinHeap:
 
 # Example usage:
 min_heap = MinHeap()
-min_heap.push(10)
-min_heap.push(5)
-min_heap.push(20)
-print(min_heap)       
-print(min_heap.pop()) 
-print(min_heap)       
+while True:
+    print('\n1.push \n2.pop \n3.peek \n4.display \n5.exit')
+    n = int(input('entr:'))
+
+    if n > 4:
+        break
+
+    if n == 1:
+        ert = int(input('enter a number:'))
+        min_heap.push(ert)
+    if n == 2:
+        min_heap.pop()
+    if n == 3:
+        print(min_heap.peek())
+    if n == 4:
+        print(min_heap)
+
+
+
 
 class rootHeap:
     def __init__(self):

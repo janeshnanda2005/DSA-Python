@@ -8,9 +8,6 @@ This repository contains implementations of various data structures and algorith
 
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 

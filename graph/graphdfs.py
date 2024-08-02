@@ -7,7 +7,7 @@ def dfs(graph, start):
     vertex = stack.pop()
     if vertex not in visited:
       visited.add(vertex)
-      print(vertex, end=' ') 
+      print(vertex, end = ' ') 
       for neighbor in graph[vertex]:
         stack.append(neighbor)
 
@@ -24,7 +24,9 @@ graph = {
 
 dfs(graph, 'A')
 
+
 """
+
 dynamic implementaion
 n=int(input("enter the number of times:"))
 for i in range(n):
@@ -32,5 +34,7 @@ for i in range(n):
   value = eval(input("enter value"))
   d[key] = value
   
-dfs(graph,'a')"""
+dfs(graph,'a')
+
+"""
 

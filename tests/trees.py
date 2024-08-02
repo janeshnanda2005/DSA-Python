@@ -8,7 +8,7 @@ def insert(root,data):
     if root is None:
         return Node(data)
     elif data < root.data:
-         root .left = insert(root.left,data)
+        root .left = insert(root.left,data)
     else:
         root.right =  insert(root.right,data)
     return root

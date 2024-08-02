@@ -26,30 +26,7 @@ def search(root,target):
     else:
         return search(root.right,target)
 
-'''def delete(root,data):
-    if root is None:
-        return root.data = 
-    elif root.data < data:
-        root.left = delete(root.left,data)
-    elif root.data > data:
-        root.right = delete(root.right,data)
-    else:
-        if root.left is None:
-            return root.right
-        elif root.right is None:
-            return root.left
-        
-        temp = _min_value_node(root.right)
-        root.data = temp.data
-        root.right = delete(root.right, temp.data)
-    
-    return root'''
 
-def _min_value_node(node):
-    current = node
-    while current.left is not None:
-        current = current.left
-    return current
 
 
 def inorder(root):

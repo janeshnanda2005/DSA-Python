@@ -5,7 +5,7 @@ class Queue:
     def enqueue(self,data):
         self.q.append(data)
 
-    def dequeue(self,data):
+    def dequeue(self):
         self.q.pop()
     
     def display(self):
@@ -21,4 +21,5 @@ class Queue:
 my = Queue()
 my.enqueue([23,45,6,7])
 my.enqueue([23,54,65,43])
+my.dequeue()
 my.display()

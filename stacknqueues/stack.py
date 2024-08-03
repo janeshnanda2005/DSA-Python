@@ -4,8 +4,12 @@ class Stack:
      
      def push(self,data):
           self.stack.append(data)
+
+
+     def pop(self):
+          self.stack.pop(self.stack.index(self.stack[0]))
      
-     def pop(self,data):
+     def pop_an_element(self,data):
           self.stack.pop(self.stack.index(data))
      
      def peek(self):
@@ -29,17 +33,14 @@ class Stack:
 
           
 simple_stack = Stack()
-simple_stack.stack_empty()
 simple_stack.push(23)
 simple_stack.push(43)
 simple_stack.push(44)
-simple_stack.pop(43)
+simple_stack.pop()
 simple_stack.peek()
 simple_stack.display()
-simple_stack.stack_empty()
 
-
-print("USING VARIABLE TOP STACK")
+'''print("USING VARIABLE TOP STACK")
 #Stack with the help of of top
 
 class Stack_top:
@@ -74,4 +75,4 @@ top.push(911)
 top.pop(34)
 top.peek()
 top.display()
-
+'''

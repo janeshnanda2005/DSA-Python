@@ -26,5 +26,5 @@ To run the code in this repository, you need to have Python installed on your ma
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/DSA-Python.git
+   git clone https://github.com/janeshnanda2005/DSA-Python.git
    cd DSA-Python

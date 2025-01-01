@@ -19,7 +19,7 @@ def search(root,target):
         return None
     
     if root.data == target:
-        return f'{root.data} is found'
+        return f'{root.data} found'
     
     if target < root.data:
         return search(root.left,target)

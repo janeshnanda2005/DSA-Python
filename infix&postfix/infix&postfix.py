@@ -33,6 +33,6 @@ def infix_to_postfix(expression):
 
 # Example usage
 if __name__ == "__main__":
-    expression = "a+b^(c^d/e)^(f^g*h)-i"
+    expression = "a+b^(c^d/e)^(f^g*h)-r"
     print(f"Infix Expression: {expression}")
     print(f"Postfix Expression: {infix_to_postfix(expression)}")
